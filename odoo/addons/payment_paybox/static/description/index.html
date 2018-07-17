@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="width:100%">
+        <h2 class="oe_slogan" style="color:#04445D;">Autorisez les paiements avec Paybox</h2>
+    </div>
+
+    <h3 class="oe_slogan" style="text-align: left; border-bottom: 1px solid #eee; opacity: 1;">Description</h3>
+    <p>Ce module implémente les paiements via le prestataire de paiement Paybox. Il permet :</p>
+    <ul>
+        <li>De payer via Paybox</li>
+    </ul>
+    <h3 class="oe_slogan" style="text-align: left; border-bottom: 1px solid #eee; opacity: 1;">Installation</h3>
+    <p>
+        Pour installer ce module, il suffit de se rendre dans le Back Office dans le menu "Application" et de rechercher "paybox" :
+        <img alt="Installation du module Odoo Paybox"
+             src="/payment_paybox/static/description/img/paybox_app_page.png"
+             class="oe_screenshot mb8"
+             style="max-width:100%;"/>
+        Ce module va ajouter un nouveau mode de paiement accessible lors du réglement des commandes et factures.
+        <br/>
+        La configuration du module se fait par le menu Comptabilité &gt; Paiements &gt; Intérmédiares de paiement &gt; Paybox :
+        <img alt="Visualisation de l'acquéreur Paybox dans le menu Comptabilité"
+             src="/payment_paybox/static/description/img/paybox_list_acquirer.png"
+             class="oe_screenshot mb8"
+             style="max-width:100%;"/>
+        <br/>
+        <img alt="Edition de l'acquéreur Paybox"
+             src="/payment_paybox/static/description/img/paybox_edit_acquirer.png"
+             class="oe_screenshot mb8"
+             style="max-width:100%;"/>
+        <br/>
+        <img alt="Edition de la configuration de l'acquéreur Paybox"
+             src="/payment_paybox/static/description/img/paybox_config_acquirer.png"
+             class="oe_screenshot mb8"
+             style="max-width:100%;"/>
+        Les valeurs à modifier sont :
+        <ul>
+            <li>Numéro de site</li>
+            <li>Numéro de rang</li>
+            <li>Numéro d'identifiant</li>
+            <li>Clé d'authentification</li>
+            <li>Clé publique</li>
+        </ul>
+        <p>Les 3 premières valeurs sont à récupérer sur le backoffice de Paybox.</p>
+        <p>
+            La clé d'authentification se génére dans le backoffice de Paybox. Pour cela, une fois dans le backoffice,
+            aller dans le menu "Information" et descendez tout en bas de la page. Vous aurez une interface ressemblant à
+            ceci :
+            <img alt="Génération de la clé d'authentification"
+                 src="/payment_paybox/static/description/img/paybox_generate_hmac.png"
+                 class="oe_screenshot mb8"
+                 style="max-width:100%;"/>
+            <br/>
+            Il vous suffit maintenant d'écrire une phrase de passe (phrase, mot de passe ou n'importe quel texte).
+            Une fois choisie, vous pouvez générer la clé en cliquant sur "Générer une clé". <br/>
+            La clé générée se retrouvera dans le champ "Clé". Copiez la et collez la dans le champ
+            "Clé d'authentification" dans le backoffice d'Odoo.
+        </p>
+        <p>
+            La clé publique se récupère dans les manuels de Verifone. Rendez-vous sur ce
+            <a href="http://www1.paybox.com/espace-integrateur-documentation/manuels/">lien</a>.
+            Cherchez dans les différents documents proposés "Clé Publique Paybox".
+            <img alt="Récupération de la clé publique Paybox"
+                 src="/payment_paybox/static/description/img/paybox_public_key.png"
+                 class="oe_screenshot mb8"
+                 style="max-width:100%;"/>
+            Téléchargez le fichier, puis chargez le fichier dans le backoffice d'Odoo en cliquant sur le bouton
+            "Chargez votre fichier".
+        </p>
+    </p>
+    <h3 class="oe_slogan" style="text-align: left; border-bottom: 1px solid #eee; opacity: 1;">Usage</h3>
+    <p>Lors du paiement d'une commande, Paybox sera proposé comme moyen de paiement.</p>
+    <h3 class="oe_slogan" style="text-align: left; border-bottom: 1px solid #eee; opacity: 1;">Credits</h3>
+    <p>Les personnes créditées peuvent être contactées pour toutes questions relative à ce module</p>
+    <ul>
+        <li>Théo Drappier &lt;<a href="mailto:theo.drappier@horanet.com">theo.drappier@horanet.com</a>&gt;</li>
+    </ul>
+    <div class="oe_row oe_spaced" style="width:100%">
+        <h4 class="oe_slogan">Maintainer</h4>
+        <a href="http://horanet.com" style="display: block;text-align: center">
+            <img alt="Horanet"
+                 src="https://cdn.horanet.com/horanet_collectivity/logos/LOGO_HORANET_2017.png"
+                 class="oe_screenshot"
+                 style="max-width: 60%;">
+        </a>
+        <div class="oe_row oe_spaced" style="width:100%; text-align: center">
+            <p>This module is maintained by Horanet</p>
+            <p>Horanet is a editor specialized in providing solutions for collectivities</p>
+        </div>
+    </div>
+</section>

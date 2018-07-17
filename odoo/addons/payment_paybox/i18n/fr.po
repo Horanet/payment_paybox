@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* payment_paybox
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-16 08:13+0000\n"
+"PO-Revision-Date: 2018-07-16 08:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_paybox
+#: model:payment.acquirer,cancel_msg:payment_paybox.payment_acquirer_paybox
+msgid "<span><i>Cancel,</i> Your payment has been cancelled.</span>"
+msgstr "<span><i>Annuler,</i> votre paiement a été annulé.</span>"
+
+#. module: payment_paybox
+#: model:payment.acquirer,done_msg:payment_paybox.payment_acquirer_paybox
+msgid "<span><i>Done,</i> Your online payment has been successfully processed. Thank you for your order.</span>"
+msgstr "<span><i>Terminé,</i> votre paiement en ligne a été enregistré. Merci de votre commande.</span>"
+
+#. module: payment_paybox
+#: model:payment.acquirer,error_msg:payment_paybox.payment_acquirer_paybox
+msgid "<span><i>Error,</i> Please be aware that an error occurred during the transaction. The order has been confirmed but will not be paid. Do not hesitate to contact us if you have any questions on the status of your order.</span>"
+msgstr "<span><i>Erreur,</i> une erreur est survenue lors de la transaction. La commande a été confirmée mais ne sera pas réglée. N'hésitez pas à nous contacter pour toute question sur le statut de la commande.</span>"
+
+#. module: payment_paybox
+#: model:payment.acquirer,pending_msg:payment_paybox.payment_acquirer_paybox
+msgid "<span><i>Pending,</i> Your online payment has been successfully processed. But your order is not validated yet.</span>"
+msgstr "<span><i>En cours,</i> votre paiement en ligne a été enregistré. Mais votre commande n'est pas encore validée.</span>"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:21
+#, python-format
+msgid "Access refused or site/rank/identifier incorrect"
+msgstr "Accès refusé ou site/rang/identifiant incorrect"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_res_currency_number
+msgid "Alphanumeric code"
+msgstr "Code alphanumérique"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:25
+#, python-format
+msgid "Amount incorrect"
+msgstr "Montant incorrect"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:17
+#, python-format
+msgid "Approved"
+msgstr "Approuvé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:18
+#, python-format
+msgid "Canceled or connection to the authorization center failed or an internal error occured"
+msgstr "Annulé ou connexion au centre d'autorisation échoué ou une erreur interne s'est produit"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:20
+#, python-format
+msgid "Card number invalid or visual cryptogram invalid"
+msgstr "Numéro de carte ou cryptogramme visuel invalide"
+
+#. module: payment_paybox
+#: model:ir.model,name:payment_paybox.model_res_currency
+msgid "Currency"
+msgstr "Devise"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:23
+#, python-format
+msgid "Error when during subscriber creation"
+msgstr "Erreur pendant la création de l'abonnement"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_form_action_url
+msgid "Form action URL"
+msgstr "URL d'action du formulaire"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_form_action_url_test
+msgid "Form action URL Test"
+msgstr "URL de test d'action du formulaire"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:22
+#, python-format
+msgid "Incorrect expiry date"
+msgstr "Date d'expiration incorrect"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:28
+#, python-format
+msgid "Not authorized bin card"
+msgstr "Carte non autorisée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:29
+#, python-format
+msgid "Not the same card used for the first payment"
+msgstr "Carte non conforme"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:34
+#, python-format
+msgid "Operation without 3DSecure authentication, blocked by the fraud filter"
+msgstr "Opération sans authentification 3-D Secure, bloquée par le filtre"
+
+#. module: payment_paybox
+#: model:payment.acquirer,name:payment_paybox.payment_acquirer_paybox
+msgid "Paybox"
+msgstr "Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_authentication_key
+msgid "Paybox Authentication Key"
+msgstr "Clé d'authentification Paybox"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:19
+#, python-format
+msgid "Paybox Error"
+msgstr "Erreur Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_id
+msgid "Paybox Internal ID"
+msgstr "Identifiant Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_public_key
+msgid "Paybox Public Key"
+msgstr "Clé publique Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_rank
+msgid "Paybox Rank Number"
+msgstr "Numéro de rang Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_site
+msgid "Paybox Site Number"
+msgstr "Numéro de site Paybox"
+
+#. module: payment_paybox
+#: model:ir.model,name:payment_paybox.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Intermédiaire de Paiement"
+
+#. module: payment_paybox
+#: model:ir.model,name:payment_paybox.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Transaction"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:26
+#, python-format
+msgid "Payment already done"
+msgstr "Paiement déjà effectué"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:35
+#, python-format
+msgid "Payment waiting confirmation from the issuer"
+msgstr "Opération en attente de validation par l’émetteur du moyen de paiement"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:31
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:32
+#, python-format
+msgid "Reserved"
+msgstr "Réservé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:93
+#, python-format
+msgid "Signature Verification Failed"
+msgstr "Vérification de la signature échouée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:27
+#, python-format
+msgid "Subscriber already exists"
+msgstr "Abonné déjà existant"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:30
+#, python-format
+msgid "Timeout"
+msgstr "Timeout"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:33
+#, python-format
+msgid "Unauthorized country code of the IP address of the cardholder's browser"
+msgstr "Code pays de l’adresse IP du navigateur de l’acheteur non autorisé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:24
+#, python-format
+msgid "Unknown currency"
+msgstr "Devise inconnue"
+
+#. module: payment_paybox
+#: model:payment.acquirer,pre_msg:payment_paybox.payment_acquirer_paybox
+msgid "You will be redirected to the Paybox website after clicking on the payment button."
+msgstr "Vous allez être redirigé vers le site de Paybox après avoir cliqué sur le bouton de paiement."

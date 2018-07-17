@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="paybox_acquirer_button">
+        <form method="POST" t-att-action="tx_url">
+            <input type="hidden" name="PBX_SITE" t-att-value="PBX_SITE"/>
+            <input type="hidden" name="PBX_RANG" t-att-value="PBX_RANG"/>
+            <input type="hidden" name="PBX_IDENTIFIANT" t-att-value="PBX_IDENTIFIANT"/>
+            <input type="hidden" name="PBX_TOTAL" t-att-value="PBX_TOTAL"/>
+            <input type="hidden" name="PBX_DEVISE" t-att-value="PBX_DEVISE"/>
+            <input type="hidden" name="PBX_CMD" t-att-value="PBX_CMD"/>
+            <input type="hidden" name="PBX_PORTEUR" t-att-value="PBX_PORTEUR"/>
+            <input type="hidden" name="PBX_RETOUR" t-att-value="PBX_RETOUR"/>
+            <input type="hidden" name="PBX_HASH" t-att-value="PBX_HASH"/>
+            <input type="hidden" name="PBX_TIME" t-att-value="PBX_TIME"/>
+            <input type="hidden" name="PBX_EFFECTUE" t-att-value="PBX_EFFECTUE"/>
+            <input type="hidden" name="PBX_REFUSE" t-att-value="PBX_REFUSE"/>
+            <input type="hidden" name="PBX_ANNULE" t-att-value="PBX_ANNULE"/>
+            <input type="hidden" name="PBX_ATTENTE" t-att-value="PBX_ATTENTE"/>
+            <input type="hidden" name="PBX_REPONDRE_A" t-att-value="PBX_REPONDRE_A"/>
+            <input type="hidden" name="PBX_HMAC" t-att-value="PBX_HMAC"/>
+            <button type="submit" width="100px" t-att-class="submit_class">
+                <img t-if="not submit_txt" src="/payment_paybox/static/src/img/paybox_icon.png"/>
+                <span t-if="submit_txt">
+                    <t t-esc="submit_txt"/>
+                    <span class="fa fa-long-arrow-right"/>
+                </span>
+            </button>
+        </form>
+    </template>
+</odoo>
