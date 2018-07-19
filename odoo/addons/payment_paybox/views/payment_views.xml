@@ -17,6 +17,8 @@
             <xpath expr="//group[@name='acquirer_config']" position="inside">
                 <field name="paybox_authentication_key"
                        attrs="{'invisible': [('provider', '!=', 'paybox')]}"/>
+                <field name="paybox_test_authentication_key"
+                       attrs="{'invisible': [('provider', '!=', 'paybox')]}"/>
                 <field name="paybox_public_key"
                        attrs="{'invisible': [('provider', '!=', 'paybox')]}"/>
             </xpath>

@@ -38,6 +38,11 @@ class PayboxAcquirer(models.Model):
         required_if_provider='paybox'
     )
 
+    # Authentication key generation in the Paybox Back Office Preprod
+    paybox_test_authentication_key = fields.Char(
+        string='Paybox Test Authentication Key'
+    )
+
     # Paybox SSH Public Key
     paybox_public_key = fields.Binary(string='Paybox Public Key')
 
@@ -72,6 +77,20 @@ class PayboxAcquirer(models.Model):
             return self.paybox_form_action_url_test
 
     @api.multi
+    def paybox_get_authentication_key(self):
+        """ Get the authentication key that depends to the chosen environment
+
+        :return: The authentication key string
+        """
+        self.ensure_one()
+
+        if self.environment == "prod":
+            return self.paybox_authentication_key
+        else:
+            return self.paybox_test_authentication_key
+
+
+    @api.multi
     def paybox_form_generate_values(self, values):
         """ Generate the values to send to Paybox
 
@@ -83,7 +102,8 @@ class PayboxAcquirer(models.Model):
         paybox_tx_values = dict((k, v) for k, v in values.items() if v)
 
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
-        key = self.paybox_authentication_key
+
+        key = self.paybox_get_authentication_key()
 
         # We create a list of tuples because to create the message, the datas must be sort in the same order than
         # the form we send to Paybox
