@@ -17,7 +17,9 @@
     'category': 'Accounting',
     #
     'external_dependencies': {
-        'python': []
+        'python': [
+            'pycryptodome'
+        ]
     },
     # any module necessary for this one to work correctly. Either because this module uses features
     # they create or because it alters resources they define.
