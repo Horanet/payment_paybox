@@ -39,13 +39,17 @@
             <li>Numéro de rang</li>
             <li>Numéro d'identifiant</li>
             <li>Clé d'authentification</li>
+            <li>Clé d'authentification de test</li>
             <li>Clé publique</li>
         </ul>
         <p>Les 3 premières valeurs sont à récupérer sur le backoffice de Paybox.</p>
         <p>
-            La clé d'authentification se génére dans le backoffice de Paybox. Pour cela, une fois dans le backoffice,
-            aller dans le menu "Information" et descendez tout en bas de la page. Vous aurez une interface ressemblant à
-            ceci :
+            La clé d'authentification et la clé d'authentification de test se générent dans les différents backoffice de Paybox
+            (<a href="https://preprod-admin.paybox.com ">Backoffice de test</a> / <a href="https://admin.paybox.com">Backoffice de prod</a>).
+            Il est important de générer les deux clés sur les deux sites pour pouvoir réaliser des paiements
+            de tests et réels en ayant seulement besoin de changer l'environnement de l'intermédiaire.
+            Pour cela, une fois dans le backoffice, aller dans le menu "Information" et descendez tout en bas de la page.
+            Vous aurez une interface ressemblant à ceci :
             <img alt="Génération de la clé d'authentification"
                  src="/payment_paybox/static/description/img/paybox_generate_hmac.png"
                  class="oe_screenshot mb8"
@@ -56,8 +60,8 @@
             la force doit être supérieure à 90%. Une fois choisie, vous pouvez générer la clé en cliquant sur "Générer une clé". <br/>
             Vous devez valider la clé en cliquant sur le bouton "Valider" en bas du cadre. Vous allez recevoir un email
             de confirmation contenant un lien pour activer la clé.<br/>
-            La clé générée se retrouvera dans le champ "Clé".
-            Copiez et collez la dans le champ "Clé d'authentification" dans le backoffice d'Odoo.
+            La clé générée se retrouvera dans le champ "Clé". Copiez et collez la dans le champ adapté dans le backoffice d'Odoo
+            (Si vous avez généré la clé sur le Backoffice Paybox de test : "Clé d'authentification de test", sinon "Clé d'authentification").
         </p>
         <p>
             La clé publique se récupère dans les manuels de Verifone. Rendez-vous sur ce

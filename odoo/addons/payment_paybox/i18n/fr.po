@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 08:13+0000\n"
-"PO-Revision-Date: 2018-07-16 08:13+0000\n"
+"POT-Creation-Date: 2018-07-23 13:25+0000\n"
+"PO-Revision-Date: 2018-07-23 13:25+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,7 @@ msgstr "<span><i>En cours,</i> votre paiement en ligne a été enregistré. Mais
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:21
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:21
 #, python-format
 msgid "Access refused or site/rank/identifier incorrect"
 msgstr "Accès refusé ou site/rang/identifiant incorrect"
@@ -48,24 +49,28 @@ msgstr "Code alphanumérique"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:25
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:25
 #, python-format
 msgid "Amount incorrect"
 msgstr "Montant incorrect"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:17
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:17
 #, python-format
 msgid "Approved"
 msgstr "Approuvé"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:18
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:18
 #, python-format
 msgid "Canceled or connection to the authorization center failed or an internal error occured"
 msgstr "Annulé ou connexion au centre d'autorisation échoué ou une erreur interne s'est produit"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:20
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:20
 #, python-format
 msgid "Card number invalid or visual cryptogram invalid"
 msgstr "Numéro de carte ou cryptogramme visuel invalide"
@@ -77,6 +82,7 @@ msgstr "Devise"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:23
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:23
 #, python-format
 msgid "Error when during subscriber creation"
 msgstr "Erreur pendant la création de l'abonnement"
@@ -93,24 +99,28 @@ msgstr "URL de test d'action du formulaire"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:22
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:22
 #, python-format
 msgid "Incorrect expiry date"
 msgstr "Date d'expiration incorrect"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:28
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:28
 #, python-format
 msgid "Not authorized bin card"
 msgstr "Carte non autorisée"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:29
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:29
 #, python-format
 msgid "Not the same card used for the first payment"
 msgstr "Carte non conforme"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:34
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:34
 #, python-format
 msgid "Operation without 3DSecure authentication, blocked by the fraud filter"
 msgstr "Opération sans authentification 3-D Secure, bloquée par le filtre"
@@ -127,6 +137,7 @@ msgstr "Clé d'authentification Paybox"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:19
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:19
 #, python-format
 msgid "Paybox Error"
 msgstr "Erreur Paybox"
@@ -152,6 +163,11 @@ msgid "Paybox Site Number"
 msgstr "Numéro de site Paybox"
 
 #. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer_paybox_test_authentication_key
+msgid "Paybox Test Authentication Key"
+msgstr "Clé d'authentification de test Paybox"
+
+#. module: payment_paybox
 #: model:ir.model,name:payment_paybox.model_payment_acquirer
 msgid "Payment Acquirer"
 msgstr "Intermédiaire de Paiement"
@@ -163,12 +179,14 @@ msgstr "Transaction"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:26
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:26
 #, python-format
 msgid "Payment already done"
 msgstr "Paiement déjà effectué"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:35
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:35
 #, python-format
 msgid "Payment waiting confirmation from the issuer"
 msgstr "Opération en attente de validation par l’émetteur du moyen de paiement"
@@ -176,36 +194,43 @@ msgstr "Opération en attente de validation par l’émetteur du moyen de paieme
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:31
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:32
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:31
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:32
 #, python-format
 msgid "Reserved"
 msgstr "Réservé"
 
 #. module: payment_paybox
-#: code:addons/payment_paybox/models/inherited_payment_transaction.py:93
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:92
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:92
 #, python-format
 msgid "Signature Verification Failed"
 msgstr "Vérification de la signature échouée"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:27
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:27
 #, python-format
 msgid "Subscriber already exists"
 msgstr "Abonné déjà existant"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:30
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:30
 #, python-format
 msgid "Timeout"
 msgstr "Timeout"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:33
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:33
 #, python-format
 msgid "Unauthorized country code of the IP address of the cardholder's browser"
 msgstr "Code pays de l’adresse IP du navigateur de l’acheteur non autorisé"
 
 #. module: payment_paybox
 #: code:addons/payment_paybox/models/inherited_payment_transaction.py:24
+#: code:addons/payment_paybox/odoo/addons/payment_paybox/models/inherited_payment_transaction.py:24
 #, python-format
 msgid "Unknown currency"
 msgstr "Devise inconnue"
