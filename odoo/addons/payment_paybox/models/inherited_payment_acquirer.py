@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api, fields, models, _
+from odoo.tools import float_round
+
 from datetime import datetime
 import hashlib
 import urlparse
@@ -102,6 +104,7 @@ class PayboxAcquirer(models.Model):
         paybox_tx_values = dict((k, v) for k, v in values.items() if v)
 
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
+        prec = self.env['decimal.precision'].precision_get('Product Price')
 
         key = self.paybox_get_authentication_key()
 
@@ -111,7 +114,7 @@ class PayboxAcquirer(models.Model):
             ('PBX_SITE', self.paybox_site),
             ('PBX_RANG', self.paybox_rank),
             ('PBX_IDENTIFIANT', self.paybox_id),
-            ('PBX_TOTAL', int(values['amount'] * 100)),
+            ('PBX_TOTAL', int(float_round(values['amount'] * 100, prec))),
             ('PBX_DEVISE', values.get('currency').number),
             ('PBX_CMD', values.get('reference').replace('/', ' ')),
             ('PBX_PORTEUR', values.get('partner_email')),
