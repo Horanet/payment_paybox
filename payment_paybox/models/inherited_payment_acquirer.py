@@ -14,37 +14,37 @@ _logger = logging.getLogger(__name__)
 class PayboxAcquirer(models.Model):
     _inherit = 'payment.acquirer'
 
-    provider = fields.Selection(selection_add=[('paybox', 'Paybox')])
+    provider = fields.Selection(selection_add=[('paybox', "Paybox")])
 
-    paybox_site = fields.Char('Paybox Site Number')
-    paybox_rank = fields.Char('Paybox Rank Number')
-    paybox_id = fields.Char('Paybox Internal ID')
+    paybox_site = fields.Char("Paybox Site Number")
+    paybox_rank = fields.Char("Paybox Rank Number")
+    paybox_id = fields.Char("Paybox Internal ID")
 
     paybox_form_action_url = fields.Char(
-        string='Form action URL',
-        default='https://tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi/',
+        string="Form action URL",
+        default="https://tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi/",
         required_if_provider='paybox'
     )
 
     paybox_form_action_url_test = fields.Char(
-        string='Form action URL Test',
-        default='https://preprod-tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi/',
+        string="Form action URL Test",
+        default="https://preprod-tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi/",
         required_if_provider='paybox'
     )
 
     # Authentication key generate in the Paybox Back Office
     paybox_authentication_key = fields.Char(
-        string='Paybox Authentication Key',
+        string="Paybox Authentication Key",
         required_if_provider='paybox'
     )
 
     # Authentication key generation in the Paybox Back Office Preprod
     paybox_test_authentication_key = fields.Char(
-        string='Paybox Test Authentication Key'
+        string="Paybox Test Authentication Key",
     )
 
     # Paybox SSH Public Key
-    paybox_public_key = fields.Binary(string='Paybox Public Key')
+    paybox_public_key = fields.Binary(string="Paybox Public Key")
 
     @api.model
     def paybox_generate_message_hmac(self, values):
@@ -71,7 +71,7 @@ class PayboxAcquirer(models.Model):
         """
         self.ensure_one()
 
-        if self.environment == "prod":
+        if self.environment == 'prod':
             return self.paybox_form_action_url
         else:
             return self.paybox_form_action_url_test
@@ -84,7 +84,7 @@ class PayboxAcquirer(models.Model):
         """
         self.ensure_one()
 
-        if self.environment == "prod":
+        if self.environment == 'prod':
             return self.paybox_authentication_key
         else:
             return self.paybox_test_authentication_key

@@ -2,7 +2,7 @@
     # Module name in English
     'name': 'Paybox Payment Acquirer',
     # Version, "odoo.min.yy.m.d"
-    'version': '10.0.1.0.1',
+    'version': '11.0.1.0.0',
     # Short description (with keywords)
     'summary': 'Payment Acquirer: Paybox Implementation',
     # Description with metadata (in french)
@@ -16,7 +16,8 @@
     'category': 'Accounting',
     #
     'external_dependencies': {
-        'python': []
+        'python': [
+        ]
     },
     # any module necessary for this one to work correctly. Either because this module uses features
     # they create or because it alters resources they define.
@@ -53,5 +54,5 @@
     # -True, module can be installed.
     # -False, module is listed in application, but cannot install them.
 
-    'post_init_hook': 'set_currencies_codes'
+    'post_init_hook': 'post_init_hook'
 }
