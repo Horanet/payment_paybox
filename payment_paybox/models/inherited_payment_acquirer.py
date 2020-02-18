@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
-
 from odoo import api, fields, models, _
 from odoo.tools import float_round
 
 from datetime import datetime
 import hashlib
-import urlparse
+import urllib.parse
 import logging
 import hmac
 import binascii
@@ -101,7 +99,7 @@ class PayboxAcquirer(models.Model):
         """
         self.ensure_one()
 
-        paybox_tx_values = dict((k, v) for k, v in values.items() if v)
+        paybox_tx_values = dict((k, v) for k, v in list(values.items()) if v)
 
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         prec = self.env['decimal.precision'].precision_get('Product Price')
@@ -121,11 +119,11 @@ class PayboxAcquirer(models.Model):
             ('PBX_RETOUR', 'amount:M;reference:R;response:E;transaction:S;signature:K'),
             ('PBX_HASH', 'SHA512'),
             ('PBX_TIME', datetime.utcnow().replace(microsecond=0).isoformat()),
-            ('PBX_EFFECTUE', urlparse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
-            ('PBX_REFUSE', urlparse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
-            ('PBX_ANNULE', urlparse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
-            ('PBX_ATTENTE', urlparse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
-            ('PBX_REPONDRE_A', urlparse.urljoin(base_url, '/payment/paybox/ipn'))
+            ('PBX_EFFECTUE', urllib.parse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
+            ('PBX_REFUSE', urllib.parse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
+            ('PBX_ANNULE', urllib.parse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
+            ('PBX_ATTENTE', urllib.parse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
+            ('PBX_REPONDRE_A', urllib.parse.urljoin(base_url, '/payment/paybox/ipn'))
         ]
 
         signature = self.paybox_generate_message_hmac(vals)

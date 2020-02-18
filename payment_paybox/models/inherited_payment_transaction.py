@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import logging
 
 from odoo import _, api, fields, models
@@ -138,7 +136,7 @@ class PayboxTransaction(models.Model):
             values['state'] = 'error'
             values['state_message'] = 'Payment rejected by the authorization center'
 
-        if transaction_status in PAYBOX_CODE_RESPONSE.iterkeys():
+        if transaction_status in iter(PAYBOX_CODE_RESPONSE.keys()):
             _logger.info(PAYBOX_CODE_RESPONSE[transaction_status])
 
             # Status code when the transaction is done
