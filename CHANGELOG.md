@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 
-## [10.0.1.0.1] 2019-03-08
+## [11.0.1.0.0] - 2020-04-02
 ### Added
-- Module creation
+- Migration v11
 
-[Unreleased]: https://gitlab.horanet.com/ingenierie/projets/default_theme/compare/10.0.1.0.1...HEAD
+[Unreleased]: https://github.com/Horanet/payment_paybox/compare/10.0.1.0.1...dev-11.0

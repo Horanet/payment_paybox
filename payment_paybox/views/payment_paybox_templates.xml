@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="paybox_acquirer_button">
-        <form method="POST" t-att-action="tx_url">
+    <template id="paybox_form">
+        <div>
+            <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
             <input type="hidden" name="PBX_SITE" t-att-value="PBX_SITE"/>
             <input type="hidden" name="PBX_RANG" t-att-value="PBX_RANG"/>
             <input type="hidden" name="PBX_IDENTIFIANT" t-att-value="PBX_IDENTIFIANT"/>
@@ -18,13 +19,6 @@
             <input type="hidden" name="PBX_ATTENTE" t-att-value="PBX_ATTENTE"/>
             <input type="hidden" name="PBX_REPONDRE_A" t-att-value="PBX_REPONDRE_A"/>
             <input type="hidden" name="PBX_HMAC" t-att-value="PBX_HMAC"/>
-            <button type="submit" width="100px" t-att-class="submit_class">
-                <img t-if="not submit_txt" src="/payment_paybox/static/src/img/paybox_icon.png"/>
-                <span t-if="submit_txt">
-                    <t t-esc="submit_txt"/>
-                    <span class="fa fa-long-arrow-right"/>
-                </span>
-            </button>
-        </form>
+        </div>
     </template>
 </odoo>
