@@ -17,6 +17,7 @@
     #
     'external_dependencies': {
         'python': [
+            'pycrypto'
         ]
     },
     # any module necessary for this one to work correctly. Either because this module uses features
