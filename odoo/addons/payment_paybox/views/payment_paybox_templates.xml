@@ -17,6 +17,8 @@
             <input type="hidden" name="PBX_ANNULE" t-att-value="PBX_ANNULE"/>
             <input type="hidden" name="PBX_ATTENTE" t-att-value="PBX_ATTENTE"/>
             <input type="hidden" name="PBX_REPONDRE_A" t-att-value="PBX_REPONDRE_A"/>
+            <input type="hidden" name="PBX_SHOPPINGCART" t-att-value="PBX_SHOPPINGCART"/>
+            <input type="hidden" name="PBX_BILLING" t-att-value="PBX_BILLING"/>
             <input type="hidden" name="PBX_HMAC" t-att-value="PBX_HMAC"/>
             <button type="submit" width="100px" t-att-class="submit_class">
                 <img t-if="not submit_txt" src="/payment_paybox/static/src/img/paybox_icon.png"/>

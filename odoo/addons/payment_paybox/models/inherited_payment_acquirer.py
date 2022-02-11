@@ -9,6 +9,7 @@ import urlparse
 import logging
 import hmac
 import binascii
+import pycountry
 
 _logger = logging.getLogger(__name__)
 
@@ -91,6 +92,45 @@ class PayboxAcquirer(models.Model):
         else:
             return self.paybox_test_authentication_key
 
+    @api.model
+    def paybox_generate_shopping_cart_xml(self, reference):
+        tx = self.env['payment.transaction'].search([('reference', '=', reference)])
+        qty = 1
+        if tx.sale_order_id:
+            qty = tx.sale_order_id.cart_quantity
+        elif tx.invoice_id:
+            qty = int(sum(tx.invoice_id.mapped('invoice_line_ids.quantity')))
+        return '<?xml version="1.0" encoding="utf-8"?>' \
+               '<shoppingcart>' \
+               '<total>' \
+               '<totalQuantity>%d</totalQuantity>' \
+               '</total>' \
+               '</shoppingcart>' % qty
+
+    @api.model
+    def paybox_generate_billing_xml(self, partner):
+        code_iso_num = pycountry.countries.get(alpha_2=partner.country_id.code)
+        return '<?xml version="1.0" encoding="utf-8"?>' \
+               '<Billing>' \
+               '<Address>' \
+               '<FirstName>%s</FirstName>' \
+               '<LastName>%s</LastName>' \
+               '<Address1>%s</Address1>' \
+               '<Address2>%s</Address2>' \
+               '<ZipCode>%s</ZipCode>' \
+               '<City>%s</City>' \
+               '<CountryCode>%s</CountryCode>' \
+               '</Address>' \
+               '</Billing>' % \
+               (
+                   partner.firstname,
+                   partner.lastname,
+                   partner.street,
+                   partner.street2,
+                   partner.zip_id.name,
+                   partner.city_id.name,
+                   code_iso_num.numeric
+               )
 
     @api.multi
     def paybox_form_generate_values(self, values):
@@ -125,7 +165,9 @@ class PayboxAcquirer(models.Model):
             ('PBX_REFUSE', urlparse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
             ('PBX_ANNULE', urlparse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
             ('PBX_ATTENTE', urlparse.urljoin(base_url, '/payment/paybox/dpn?return_url=%s' % values.get('return_url'))),
-            ('PBX_REPONDRE_A', urlparse.urljoin(base_url, '/payment/paybox/ipn'))
+            ('PBX_REPONDRE_A', urlparse.urljoin(base_url, '/payment/paybox/ipn')),
+            ('PBX_SHOPPINGCART', self.paybox_generate_shopping_cart_xml(values.get('reference'))),
+            ('PBX_BILLING', self.paybox_generate_billing_xml(values.get('partner')))
         ]
 
         signature = self.paybox_generate_message_hmac(vals)

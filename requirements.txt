@@ -1,1 +1,2 @@
 pycryptodome==3.6.3
+pycountry==18.12.8
