@@ -17,7 +17,7 @@
     #
     'external_dependencies': {
         'python': [
-            'pycryptodome'
+            'Crypto'
         ]
     },
     # any module necessary for this one to work correctly. Either because this module uses features
