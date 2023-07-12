@@ -2,7 +2,7 @@
     # Module name in English
     'name': 'Paybox Payment Acquirer',
     # Version, "odoo.min.yy.m.d"
-    'version': '11.0.1.0.1',
+    'version': '11.0.23.7.12',
     # Short description (with keywords)
     'summary': 'Payment Acquirer: Paybox Implementation',
     # Description with metadata (in french)
