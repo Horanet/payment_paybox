@@ -61,7 +61,7 @@ class PayboxAcquirer(models.Model):
 
             signature += s
 
-        return signature
+        return signature.encode('utf-8')
 
     @api.multi
     def paybox_get_form_action_url(self):

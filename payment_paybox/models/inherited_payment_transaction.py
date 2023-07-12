@@ -49,7 +49,7 @@ class PayboxTransaction(models.Model):
         transaction = self.sudo().search([('reference', '=', reference)])
 
         if not transaction or len(transaction) > 1:
-            error_msg = "SystemPay: received bad data for reference {}".format(reference)
+            error_msg = "Paybox: received bad data for reference {}".format(reference)
 
             if not transaction:
                 error_msg += "; no order found"
