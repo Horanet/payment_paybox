@@ -58,6 +58,29 @@ class PayboxTransaction(models.Model):
 
             _logger.info(error_msg)
             raise ValidationError(error_msg)
+        elif transaction.acquirer_reference and data.get('transaction') != transaction.acquirer_reference:
+            # In Paybox, if an error occurs due to 3DSecure authentication for example, Paybox store the transaction as
+            # an error and call IPN route. It means that the transaction in Odoo is updated, the state is set as
+            # 'error', and store the acquirer reference in it. But Paybox does not redirect to Odoo after this error,
+            # the user is allowed to retry the payment, if so, it generates a new reference in Paybox. So when the user
+            # pay, the IPN route is called with another reference, and we get an error where it's impossible to update
+            # the transaction because the references are different.
+            # We first search for an existing transaction which generate a new transaction with a reference updated,
+            # to have the same history as Paybox.
+            reference_transaction = transaction.reference.split('x')
+            if reference_transaction:
+                existing_transaction = transaction.search([
+                    ('reference', 'like', reference_transaction[0]),
+                    ('acquirer_reference', '=', data.get('transaction'))
+                ])
+                if existing_transaction:
+                    transaction = existing_transaction
+                else:
+                    new_reference_transaction = self.get_next_reference(reference_transaction[0])
+                    transaction = transaction.copy({
+                        'reference': new_reference_transaction,
+                        'acquirer_reference': False,
+                    })
 
         # Verify the signature give in the data
         # List of tuples to create the message to create signature
