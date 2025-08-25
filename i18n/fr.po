@@ -1,0 +1,523 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_paybox
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-26 12:41+0000\n"
+"PO-Revision-Date: 2025-08-26 12:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Access refused or site/rank/identifier incorrect"
+msgstr "Accès refusé ou site/rang/identifiant incorrect"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Acquiring organization ID unknown"
+msgstr "Identifiant de l’organisme acquéreur inconnu"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_res_currency__number
+msgid "Alphanumeric code"
+msgstr "Code alphanumérique"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Amount incorrect"
+msgstr "Montant incorrect"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Approve after cardholder identification"
+msgstr "Approuver après identification du porteur"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Approved"
+msgstr "Approuvé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Authentication failure"
+msgstr "Echec de l’authentification"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid ""
+"Canceled or connection to the authorization center failed or an internal "
+"error occured"
+msgstr ""
+"Annulé ou connexion au centre d'autorisation échoué ou une erreur interne "
+"s'est produit"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Card expiration date expired"
+msgstr "Date de validité de la carte dépassée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Card issuer inaccessible"
+msgstr "Emetteur de cartes inaccessible"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Card not in file"
+msgstr "Carte absente du fichier"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Card number invalid or visual cryptogram invalid"
+msgstr "Numéro de carte ou cryptogramme visuel invalide"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Card validity date exceeded"
+msgstr "Date de validité de la carte dépassée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Cardholder already blocked, old record retained"
+msgstr "Porteur déjà en opposition, ancien enregistrement conservé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Contact card issuer"
+msgstr "Contacter l’émetteur de carte"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_acquirer.py:0
+#: code:addons/payment_paybox/models/inherited_payment_acquirer.py:0
+#, python-format
+msgid "Couldn't pay with disabled payment acquirer."
+msgstr "impossible de payer avec un intermédiaire de paiement désactivé."
+
+#. module: payment_paybox
+#: model:ir.model,name:payment_paybox.model_res_currency
+msgid "Currency"
+msgstr "Devise"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Customer cancellation"
+msgstr "Annulation client"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Do not honor"
+msgstr "Ne pas honorer"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Duplicate record, old record replaced"
+msgstr "Enregistrement dupliqué, ancien enregistrement remplacé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Duplicate request"
+msgstr "Demande dupliquée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Error in \"edit\" field File update"
+msgstr "Erreur en « edit » sur champ de mise à jour fichier"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Error when during subscriber creation"
+msgstr "Erreur pendant la création de l'abonnement"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Exceeds the withdrawal amount limit"
+msgstr "Dépasse la limite du montant de retrait"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "File access denied"
+msgstr "Accès interdit au fichier"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "File update impossible"
+msgstr "Mise à jour de fichier impossible"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "File update not supported"
+msgstr "Mise à jour de fichier non supportée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Format error"
+msgstr "Erreur de format"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Global monitoring timeout expired"
+msgstr "Échance de la temporisation de surveillance global"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Incorrect PIN"
+msgstr "Code confidentiel erroné"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Incorrect expiry date"
+msgstr "Date d'expiration incorrect"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Incorrect response"
+msgstr "Réponse erronée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Initiating domain incident"
+msgstr "Idencident domaine initiateur"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Insufficient funds or credit exceeded"
+msgstr "Provision insuffisante ou crédit dépassé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Invalid amount"
+msgstr "Montant invalide"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Invalid cardholder number"
+msgstr "Numéro de porteur invalide"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Invalid merchant"
+msgstr "Commerçant invalide"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Invalid transaction"
+msgstr "Transaction invalide"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Keep card"
+msgstr "Conserver la carte"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Keep card, special conditions"
+msgstr "Conserver la carte, conditions spéciales"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Lost card"
+msgstr "Carte perdue"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Not authorized bin card"
+msgstr "Carte non autorisée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Not the same card used for the first payment"
+msgstr "Carte non conforme"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Number of PIN attempts exceeded"
+msgstr "Nombre d’essais code confidentiel dépassé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Operation without 3DSecure authentication, blocked by the fraud filter"
+msgstr "Opération sans authentification 3-D Secure, bloquée par le filtre"
+
+#. module: payment_paybox
+#: model:ir.model.fields.selection,name:payment_paybox.selection__payment_acquirer__provider__paybox
+#: model:payment.acquirer,name:payment_paybox.payment_acquirer_paybox
+msgid "Paybox"
+msgstr ""
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer__paybox_authentication_key
+msgid "Paybox Authentication Key"
+msgstr "Clé d'authentification Paybox"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Paybox Error"
+msgstr "Erreur Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer__paybox_id
+msgid "Paybox Internal ID"
+msgstr "Identifiant Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer__paybox_public_key
+msgid "Paybox Public Key"
+msgstr "Clé publique Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer__paybox_rank
+msgid "Paybox Rank Number"
+msgstr "Numéro de rang Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer__paybox_site
+msgid "Paybox Site Number"
+msgstr "Numéro de site Paybox"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer__paybox_test_authentication_key
+msgid "Paybox Test Authentication Key"
+msgstr "Clé d'authentification de test Paybox"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_acquirer.py:0
+#: code:addons/payment_paybox/models/inherited_payment_acquirer.py:0
+#, python-format
+msgid "Paybox server is unavailable!"
+msgstr "Serveur Paybox indisponible !"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Paybox: received data with missing reference (%s) "
+msgstr "Paybox : données reçues avec référence manquante (%s) "
+
+#. module: payment_paybox
+#: model:ir.model,name:payment_paybox.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Intermédiaire de Paiement"
+
+#. module: payment_paybox
+#: model:ir.model,name:payment_paybox.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Transaction"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Payment already done"
+msgstr "Paiement déjà effectué"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Payment rejected by the authorization center (%s - %s)"
+msgstr "Paiement rejeté par le centre d'autorisation (%s - %s)"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Payment waiting confirmation from the issuer"
+msgstr ""
+"Opération en attente de validation par l’émetteur du moyen de paiement"
+
+#. module: payment_paybox
+#: model:ir.model.fields,field_description:payment_paybox.field_payment_acquirer__provider
+msgid "Provider"
+msgstr "Fournisseur"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Repeat transaction later"
+msgstr "Répéter la transaction ultérieurement"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Reserved"
+msgstr "Réservé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Response not received or received too late"
+msgstr "Réponse non parvenue ou reçue trop tard"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Security rules not respected"
+msgstr "Règles de sécurité non respectées"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Server unreachable"
+msgstr "Serveur inacessible"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Signature Verification Failed"
+msgstr "Vérification de la signature échouée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Stolen card"
+msgstr "Carte volée"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Subscriber already exists"
+msgstr "Abonné déjà existant"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Suspected fraud"
+msgstr "Suspicion de fraude"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "System malfunction"
+msgstr "Mauvais fonctionnement du système"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Temporary system shutdown"
+msgstr "Arrêt momentané du système"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "The card acceptor must contact the acquirer"
+msgstr "L’accepteur de carte doit contacter l’acquéreur"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Timeout"
+msgstr "Délai expiré"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Transaction not permitted for this cardholder"
+msgstr "Transaction non permise à ce porteur"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Transaction prohibited at the terminal"
+msgstr "Transaction interdite au terminal"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid ""
+"Unauthorized country code of the IP address of the cardholder's browser"
+msgstr "Code pays de l’adresse IP du navigateur de l’acheteur non autorisé"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Unknown card issuer"
+msgstr "Emetteur de carte inconnu"
+
+#. module: payment_paybox
+#: code:addons/payment_paybox/models/inherited_payment_transaction.py:0
+#, python-format
+msgid "Unknown currency"
+msgstr "Devise inconnue"
+
+#. module: payment_paybox
+#: model_terms:payment.acquirer,cancel_msg:payment_paybox.payment_acquirer_paybox
+msgid "Your payment has been cancelled."
+msgstr "Votre paiement a été annulé."
+
+#. module: payment_paybox
+#: model_terms:payment.acquirer,auth_msg:payment_paybox.payment_acquirer_paybox
+msgid "Your payment has been authorized."
+msgstr "Votre paiement a été autorisé."
+
+#. module: payment_paybox
+#: model_terms:payment.acquirer,pending_msg:payment_paybox.payment_acquirer_paybox
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr ""
+"Votre paiement a été traité avec succès mais est en attente de validation."
+
+#. module: payment_paybox
+#: model_terms:payment.acquirer,done_msg:payment_paybox.payment_acquirer_paybox
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr "Votre paiement a été traité avec succès. Merci!"
+
+#. module: payment_paybox
+#: model_terms:payment.acquirer,pre_msg:payment_paybox.payment_acquirer_paybox
+msgid ""
+"You will be redirected to the Paybox website after clicking on the payment "
+"button."
+msgstr ""
+"Vous serez redirigé vers le site web de Paybox après avoir cliqué sur le bouton de paiement."
