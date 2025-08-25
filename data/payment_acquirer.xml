@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data noupdate="1">
         <record id="payment_acquirer_paybox" model="payment.acquirer">
-            <field name="journal_id" eval="False"/>
             <field name="name">Paybox</field>
-            <field name="image" type="base64" file="payment_paybox/static/src/img/paybox_icon.png"/>
+            <field name="image_128" type="base64" file="payment_paybox/static/description/icon.png" />
             <field name="provider">paybox</field>
-            <field name="company_id" ref="base.main_company"/>
-            <field name="view_template_id" ref="paybox_form"/>
-            <field name="environment">test</field>
+            <field name="company_id" ref="base.main_company" />
+            <field name="view_template_id" ref="paybox_form" />
             <field name="pre_msg">
                 <![CDATA[
 <p>You will be redirected to the Paybox website after clicking on the payment button.</p>]]>
@@ -16,8 +14,6 @@
             <field name="paybox_site">dummy</field>
             <field name="paybox_rank">dummy</field>
             <field name="paybox_id">dummy</field>
-            <field name="paybox_form_action_url">https://tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi/</field>
-            <field name="paybox_form_action_url_test">https://preprod-tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi/</field>
             <field name="paybox_authentication_key">dummy</field>
             <field name="description" type="html">
                 <p>
@@ -25,7 +21,7 @@
                 </p>
                 <ul class="list-inline">
                     <li>
-                        <i class="fa fa-check"/>eCommerce
+                        <i class="fa fa-check" />eCommerce
                     </li>
                 </ul>
             </field>

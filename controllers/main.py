@@ -4,8 +4,7 @@ from odoo import http
 from odoo.http import request
 
 
-class SystemPayController(http.Controller):
-
+class PayboxController(http.Controller):
     @http.route('/payment/paybox/ipn', type='http', methods=['GET'], auth='public', csrf=False)
     def paybox_ipn(self, **kw):
         """Route called after a transaction with Paybox
@@ -27,6 +26,6 @@ class SystemPayController(http.Controller):
         """
 
         request.env['payment.transaction'].form_feedback(kw, 'paybox')
-        return_url = kw.get('return_url', '/')
+        return_url = kw.get('return_url', '/payment/process')
 
         return werkzeug.utils.redirect(return_url)

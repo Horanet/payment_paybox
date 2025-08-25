@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="acquirer_form_paybox" model="ir.ui.view">
+        <field name="name">acquirer.form.paybox</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form" />
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='after'>
+                <group name="paybox_info" attrs="{'invisible': [('provider', '!=', 'paybox')]}">
+                    <field name="paybox_site" />
+                    <field name="paybox_rank" />
+                    <field name="paybox_id" />
+                </group>
+            </xpath>
+            <xpath expr="//group[@name='acquirer_config']" position="inside">
+                <group name="paybox_config" attrs="{'invisible': [('provider', '!=', 'paybox')]}"> 
+                    <field name="paybox_authentication_key" />
+                    <field name="paybox_test_authentication_key" />
+                    <field name="paybox_public_key" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
