@@ -2,7 +2,7 @@
     # Module name in English
     'name': 'Paybox Payment Acquirer',
     # Version, "odoo.min.yy.m.d"
-    'version': '11.0.23.7.12',
+    'version': '13.0.1.0.0',
     # Short description (with keywords)
     'summary': 'Payment Acquirer: Paybox Implementation',
     # Description with metadata (in french)
@@ -17,7 +17,7 @@
     #
     'external_dependencies': {
         'python': [
-            'Crypto'
+            'pycryptodome',
         ]
     },
     # any module necessary for this one to work correctly. Either because this module uses features
@@ -26,7 +26,6 @@
         # --- Odoo --- #
         'payment'
         # --- External --- #
-
         # --- Horanet --- #
     ],
     # always loaded
@@ -40,8 +39,7 @@
     'data': [
         'views/payment_paybox_templates.xml',
         'views/payment_views.xml',
-
-        'data/payment_acquirer.xml'
+        'data/payment_acquirer.xml',
     ],
     # only loaded in demonstration mode
     'demo': [],
@@ -54,6 +52,5 @@
     'installable': True,
     # -True, module can be installed.
     # -False, module is listed in application, but cannot install them.
-
-    'post_init_hook': 'post_init_hook'
+    'post_init_hook': 'post_init_hook',
 }
