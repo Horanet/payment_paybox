@@ -4,6 +4,7 @@
         <record id="payment_acquirer_paybox" model="payment.acquirer">
             <field name="name">Paybox</field>
             <field name="image_128" type="base64" file="payment_paybox/static/description/icon.png" />
+            <field name="module_id" ref="base.module_payment_paybox" />
             <field name="provider">paybox</field>
             <field name="company_id" ref="base.main_company" />
             <field name="view_template_id" ref="paybox_form" />
